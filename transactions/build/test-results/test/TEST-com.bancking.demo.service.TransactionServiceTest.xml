@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bancking.demo.service.TransactionServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-09-16T08:07:24" hostname="DESKTOP-PN3B0NB" time="1.547">
+  <properties/>
+  <testcase name="prepareTransactions()" classname="com.bancking.demo.service.TransactionServiceTest" time="1.547">
+    <failure message="java.lang.AssertionError: expectation &quot;expectComplete&quot; failed (expected: onComplete(); actual: onNext(Transaction{id='null', amount=300.0, fee=0.0}))" type="java.lang.AssertionError">java.lang.AssertionError: expectation &quot;expectComplete&quot; failed (expected: onComplete(); actual: onNext(Transaction{id='null', amount=300.0, fee=0.0}))
+	at reactor.test.MessageFormatter.assertionError(MessageFormatter.java:115)
+	at reactor.test.MessageFormatter.failPrefix(MessageFormatter.java:104)
+	at reactor.test.MessageFormatter.fail(MessageFormatter.java:73)
+	at reactor.test.MessageFormatter.failOptional(MessageFormatter.java:88)
+	at reactor.test.DefaultStepVerifierBuilder.lambda$expectComplete$4(DefaultStepVerifierBuilder.java:344)
+	at reactor.test.DefaultStepVerifierBuilder$SignalEvent.test(DefaultStepVerifierBuilder.java:2289)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onSignal(DefaultStepVerifierBuilder.java:1529)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onExpectation(DefaultStepVerifierBuilder.java:1477)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onNext(DefaultStepVerifierBuilder.java:1146)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158)
+	at reactor.core.publisher.MonoReduce$ReduceSubscriber.onComplete(MonoReduce.java:197)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:357)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultStepVerifier.toVerifierAndSubscribe(DefaultStepVerifierBuilder.java:891)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultStepVerifier.verify(DefaultStepVerifierBuilder.java:831)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultStepVerifier.verify(DefaultStepVerifierBuilder.java:823)
+	at reactor.test.DefaultStepVerifierBuilder.verifyComplete(DefaultStepVerifierBuilder.java:690)
+	at com.bancking.demo.service.TransactionServiceTest.prepareTransactions(TransactionServiceTest.java:84)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
