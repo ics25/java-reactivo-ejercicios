@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "4285946f-e267-434d-9ad6-b2d68e2c9a4c",
+		"name": "cash-out Fynal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13595510"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Ivan Rene\",\r\n\"balance\": 200.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/users/66fa1fc12d8b6a1441cb5ebb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"users",
+						"66fa1fc12d8b6a1441cb5ebb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Balance",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 50.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/users/66fa1fc12d8b6a1441cb5ebb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"users",
+						"66fa1fc12d8b6a1441cb5ebb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Cashout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"66fa24032d8b6a1441cb5ec0\",\r\n    \"amount\": 51.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/cashouts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"cashouts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cash-out",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/cashouts/user/66fa24032d8b6a1441cb5ec0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"cashouts",
+						"user",
+						"66fa24032d8b6a1441cb5ec0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
